@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/giveaways_nav"
+    app:startDestination="@id/giveaways_fragment">
+
+    <fragment
+        android:id="@+id/giveaways_fragment"
+        android:label="All Giveaways"
+        tools:layout="@layout/fragment_giveaways"
+        android:name="com.emissa.apps.gamergiveaways.views.GiveawaysFragment" >
+        <action
+            android:id="@+id/action_giveaways_fragment_to_pc_giveaways_fragment"
+            app:destination="@id/pc_giveaways_fragment" />
+        <action
+            android:id="@+id/action_giveaways_fragment_to_ps4_giveaways_fragment"
+            app:destination="@id/ps4_giveaways_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pc_giveaways_fragment"
+        android:label="PC Giveaways"
+        tools:layout="@layout/fragment_p_c_giveaways"
+        android:name="com.emissa.apps.gamergiveaways.views.PCGiveawaysFragment" />
+
+    <fragment
+        android:id="@+id/ps4_giveaways_fragment"
+        android:label="PS4 Giveaways"
+        tools:layout="@layout/fragment_ps4_giveaways"
+        android:name="com.emissa.apps.gamergiveaways.views.Ps4GiveawaysFragment" />
+</navigation>
